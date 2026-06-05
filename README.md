@@ -3,7 +3,21 @@
 Interact with hydrangeas to release your suppressed emotions. Move lighter, live lighter.**
 紫陽花と触れ合い、抑え込んだ感情を解放する。思考と行動を、もっと軽やかに。）
 
-[![Launch App](https://img.shields.io/badge/Launch-Web%20App-blueviolet?style=for-the-badge&logo=vercel)](https://water-vessel-310.vercel.app)
+<!-- 画像1 -->
+<img src="azi0.png" width="100%" alt="azi0">
+
+<!-- 画像2 -->
+<img src="azi1.png" width="100%" alt="azi1">
+
+<!-- 画像3 -->
+<img src="azi2.png" width="100%" alt="azi2">
+
+<!-- 画像4 -->
+<img src="azi3.png" width="100%" alt="azi3">
+
+<!-- 画像5 -->
+<img src="azi4.png" width="100%" alt="azi4">
+
 
 
 
