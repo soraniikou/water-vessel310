@@ -1092,7 +1092,7 @@ export default function App() {
 
           <button type="button" onClick={() => setStep("handover")}
             style={{
-              position: "absolute", top: "50%", left: "50%", transform: "translate(calc(-50% - 24px), -50%)",
+              position: "absolute", top: "calc(50% + 110px)", left: "50%", transform: "translateX(-50%)",
               padding: "0.6rem 1.8rem", fontFamily: "inherit",
               fontSize: "0.85rem", letterSpacing: "0.25em",
               background: "transparent", border: "1px solid rgba(200,216,232,0.4)",
