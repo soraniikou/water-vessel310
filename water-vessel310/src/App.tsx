@@ -511,6 +511,17 @@ export default function App() {
     });
   };
 
+  const removeLastFloret = () => {
+    setFlorets((fs) => {
+      if (fs.length === 0) return fs;
+      const next = fs.slice(0, -1);
+      return next.map((f, i) => {
+        const p = positionForIndex(i);
+        return { ...f, x: p.x, y: p.y, r: p.r, rot: p.rot, seed: i + 1 };
+      });
+    });
+  };
+
   const handleBloomBackgroundTap = () => {
     if (step === "tend" && mode === "grow") addFloret();
   };
@@ -764,11 +775,11 @@ export default function App() {
               display: "flex", gap: "0.5rem", marginBottom: "0.8rem",
               background: "rgba(255,255,255,0.35)", padding: "0.35rem", borderRadius: "999px",
             }}>
-              <button type="button" onClick={() => setMode("grow")}
+              <button type="button" onClick={() => { setMode("grow"); addFloret(); }}
                 style={{ ...pillStyle, padding: "0.46rem 0.6rem", fontSize: "0.7rem", letterSpacing: "0.06em", background: mode === "grow" ? accentColor : "transparent", color: mode === "grow" ? "#fff" : "#3a3a3a" }}>
                 add a petal
               </button>
-              <button type="button" onClick={() => setMode("remove")}
+              <button type="button" onClick={() => { setMode("remove"); removeLastFloret(); }}
                 style={{ ...pillStyle, padding: "0.46rem 0.6rem", fontSize: "0.7rem", letterSpacing: "0.06em", background: mode === "remove" ? accentColor : "transparent", color: mode === "remove" ? "#fff" : "#3a3a3a" }}>
                 let one go
               </button>
