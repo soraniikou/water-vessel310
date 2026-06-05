@@ -750,6 +750,14 @@ export default function App() {
             ))}
         </g>
 
+        {step === "tend" && (
+          <text x="0" y="-150" textAnchor="middle"
+            fill="#5a5a5a" fontSize="14" fontStyle="italic" letterSpacing="1.2"
+            style={{ fontFamily: "inherit", opacity: 0.75, pointerEvents: "none" }}>
+            tap the petals
+          </text>
+        )}
+
         {fallenTasks.map((t, i) => {
           const c = PALETTE[i % PALETTE.length];
           const x = -100 + (i % 6) * 34 + (Math.floor(i / 6) % 2) * 17;
