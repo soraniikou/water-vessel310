@@ -506,7 +506,7 @@ export default function App() {
       const next = fs.filter((f) => f.id !== id);
       return next.map((f, i) => {
         const p = positionForIndex(i);
-        return { ...f, x: p.x, y: p.y, r: p.r, rot: p.rot };
+        return { ...f, x: p.x, y: p.y, r: p.r, rot: p.rot, seed: i + 1 };
       });
     });
   };
@@ -1150,7 +1150,7 @@ export default function App() {
               transform: handoverTouched ? "scale(1.15)" : "scale(1)",
               filter: sunflowerBlendT > 0 ? "blur(2.2px)" : "blur(1px)",
             }}>
-            <svg viewBox="-95 -98 190 196" width="120" height="120" style={{
+            <svg viewBox="-95 -98 190 196" width="180" height="180" style={{
               display: "block", overflow: "visible",
               animation: handoverTouched
                 ? `spin12 ${sunflowerBlendT > 0 ? 24 : 12}s linear infinite`
