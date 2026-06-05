@@ -326,7 +326,7 @@ function FloretShape({
 
   return (
     <g transform={`translate(${cx} ${cy}) rotate(${rot})`}
-      onClick={interactive ? (e) => { e.stopPropagation(); onTap(floret.id); } : undefined}
+      onClick={interactive && mode === "remove" ? (e) => { e.stopPropagation(); onTap(floret.id); } : undefined}
       opacity={skipDepth ? 1 : depthOpacity * topLight}
       style={{
         cursor: interactive && mode === "remove" ? "pointer" : "default",
@@ -649,10 +649,10 @@ export default function App() {
         }
         /* handover: caption below centered flower; back button at bottom center */
         .handover-caption { top: calc(50% + 100px); }
-        .handover-back { bottom: 2.5rem; }
+        .handover-back { bottom: 1.2rem; }
         @media (max-width: 600px) {
           .handover-caption { top: calc(50% + 72px); }
-          .handover-back { bottom: 2rem; }
+          .handover-back { bottom: 1rem; }
         }
         .fade-up { animation: fadeUp 1.2s ease-out both; }
         .voice-line {
