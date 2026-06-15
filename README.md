@@ -43,13 +43,20 @@ Hydrangea is a beautifully minimal, interactive mental wellness web app designed
    * As you engage with the app and declutter your thoughts, the shadow-like gray petals multiply and bloom, transforming into a vibrant, fresh radiance of light purple, soft pink, and pure white.
    * 画面を進めて思考を整理していくと、舞い落ちる花びらが現れます。自由さを表現しています。どんな自分でも愛されていいとお伝えしたくてアプリに思いをこめました。
 
-
+このアプリは Vite + React + TypeScript で作られた、いわゆる静的なWebアプリです。Vercel というサービス上で公開していますが、ユーザーの入力を受け取って処理する「サーバー側のプログラム」を持っていません。
+つまり、あなたが入力欄に書いた言葉は、
+あなたのブラウザの中だけで処理されます
+どこかのサーバーに送信されません
+データベースに記録されません
+私（開発者）も、その内容を一切見ることができません
+入力された言葉は、画面に表示されるためだけに、ブラウザの一時的なメモリ上に存在します。ページを閉じれば、その言葉はどこにも残りません。〔※localStorageを使っている場合はここを「お使いの端末（ブラウザ）の中にのみ保存され、他のどこにも送られません」に差し替え〕
+ログイン不要、メールアドレス不要、何の登録もいりません。だからこそ、誰の目も気にせず、安心して言葉を置いていけます。
 
 🌻　Our Vision / 開発の想い
 
 In a noisy world, we often lock away our true feelings and overcomplicate our minds. This product was born from a vision to help people declutter their thoughts and actions, allowing them to live with a lighter heart. 
 
-ノイズの多い世界の中で、私たちはしばしば本当の感情を閉じ込め、思考を複雑にしすぎてしまいます。このプロダクトは、人々が思考と行動を整理し、もっと軽く生きられるようにという願いから生まれました。愛されていいと感じて頂ければ幸いです。
+ノイズの多い世界の中で、私たちはしばしば本当の感情を閉じ込め、思考を複雑にしすぎることもあります。このプロダクトは、自分は愛されていいよ。と感じていただきたくてという願いから生まれました。どんな自分も愛されていいと感じて頂ければ幸いです。
 
 
 
